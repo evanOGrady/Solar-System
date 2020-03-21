@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Neighbors from Space</title>
+	<link rel="stylesheet" type="text/css" href="mercury.css">
+</head>
+<body>
+	<header class="header">
+		<div class="logo">
+			<img src="img\logo.png">
+			<br>
+		</div>
+
+	</header>
+
+	<nav class="drop-down">
+		<a href="#About">
+			<button type="button">About</button>
+		</a>
+
+		<label for="planets-nav"><strong>Planets: </strong></label>
+		<select name="planets" id="planets">
+			<option value="nothing" selected="selected">Select a Planet</option>
+			<option value="mercury.html">Mercury</option>
+			<option value="venus.html">Venus</option>
+			<option value="earth.html">Earth</option>
+			<option value="mars.html">Mars</option>
+			<option value="jupiter.html">Jupiter</option>
+			<option value="saturn.html">Saturn</option>
+			<option value="uranus.html">Uranus</option>
+			<option value="neptune.html">Neptune</option>
+		</select>
+
+		<!-- I got the info for the java script from this youtube video
+			https://www.youtube.com/watch?v=jFC91RVs4NE&t=346s
+		-->
+		<script type="text/javascript">
+			var urlMenu = document.getElementById('planets');
+			urlMenu.onchange = function() {
+				var userOption = this.options[this.selectedIndex];
+				if (userOption.value != "nothing") {
+					window.open (userOption.value, "Planet page")
+				}
+			}
+		</script>
+
+		<label for="contact"><strong>Contact: </strong></label>
+		<select name="contact" id="contact">
+			<option value="nothing" selected="selected">Select for Conact Info</option>
+			<option value="mailto:evanogrady603@gmail.com">Email</option>
+			<option value="https://www.linkedin.com/in/evan-o-grady-2a425218a/">LinkedIn</option>
+			<option value="https://github.com/evanOGrady">GitHub</option>
+		</select>
+
+		<script type="text/javascript">
+			var urlMenu = document.getElementById('contact');
+			urlMenu.onchange = function() {
+				var userOption = this.options[this.selectedIndex];
+				if (userOption.value != "nothing") {
+					window.open (userOption.value, "Links")
+				}
+			}
+		</script>
+		
+	</nav>
+
+	<section class="opening">
+		<img src="img\Earth.jpg" width="300px" height="300px" alt="Earth">
+		<div class="description">
+			<h1>Earth</h1>
+			<p>Earth is the densest planet in the solar system.  The average density of earth is 5.52 grams per cubic centemeter.
+				<br>
+			Earth is also the planet the us humans live on.  In case you didn't know that.</p>
+		</div>
+
+		<div class="crater">
+			<img src="img\ocean.jpeg">
+			<p>Earth is also the only planet in the solar system to have a known bodies of water.  These bodies of water are essential to life on earth.</p>
+		</div>
+	</section>
+
+	<article class="references">
+		<h2>References for Earth: </h2>
+		<br>
+		<p>https://space-facts.com/earth/<br><br>
+		https://en.wikipedia.org/wiki/<br>Extraterrestrial_liquid_water</p>
+	</article>
+
+
+	<aside>
+		<a class="twitter-timeline" data-width="400" data-height="500" data-theme="dark" href="https://twitter.com/NASA?ref_src=twsrc%5Etfw">Tweets by NASA</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</aside>
+
+
+	<!-- I had trouble making the footer, so I got some help from stack overflow
+		https://stackoverflow.com/questions/60687447/why-isnt-my-footer-at-the-bottom-of-the-page/60688208?noredirect=1#comment107377432_60688208
+	-->
+	<footer id="footer">
+		<h4 id="About">About The Creator...</h4>
+		<img src="img\Evan NASA.jpg" align="evanNasa"
+			><div class="paragraph">
+				 <p>Evan O'Grady is a Software Development student at NHTI-Concord's Community College
+				in Concord, New Hampshire in the United States.  He created this website as a school project for his web devlopment class.  
+
+				In his free time Evan enjoys, hiking, playing guitar, playing piano, and drawing.</p>
+			</div>
+
+			<div class="contact-links">
+
+				<img src="img\email.jpeg" alt="email">
+				<a href="mailto:evanogrady603@gmail.com">evanogrady603@gmail.com</a>
+				<br>
+
+				<img src="img\github.jpeg">
+				<a href="https://github.com/evanOGrady">
+					<button onclick="https://github.com/evanOGrady">https://github.com/evanOGrady</button>
+				</a>
+				<br>
+
+				<img src="img\linkedin.jpeg">
+				<a href="https://www.linkedin.com/in/evan-o-grady-2a425218a/">
+					<button type="button">www.linkedin.com/in/evanogrady</button>
+				</a>
+				<br>
+			</div>
+	</footer>
+</body>
+	
+</html>
